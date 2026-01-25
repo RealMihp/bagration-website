@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.first {
+    background: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+        url('https://storage01.sb.by/iblock/0d5/0d56577139a7c71d3b66c9b6f7529ea2/8a29bed39e520b1fd94f6cf9b3f6dbf2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#statsgrid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: auto; 
+    gap: 20px;
+    justify-content: center; 
+    justify-items: center;   
+}
+
+/* Стили для всех карточек*/
+#front, #suarmy, #depth, #result {
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    
+    aspect-ratio: 1 / 1.3; 
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+/* Мобилки */
+@media (max-width: 500px) {
+    #front, #suarmy, #depth, #result {
+
+        aspect-ratio: auto; 
+        min-height: 200px; 
+        padding: 40px 20px;
+    }
+    
+    #statsgrid {
+        gap: 15px;
+    }
+
+    .first {
+        background-attachment: scroll !important;
+        background-position: center center;
+        
+        height: 100dvh;
+    }
+}
+/* Планшеты */
+@media (min-width: 930px) and (max-width: 1300px) {
+    /* Лишняя в ряду */
+    #result {
+        grid-column: span 3; 
+        aspect-ratio: auto;   
+        min-height: 300px;
+    }
+}
+
+
+
+
+.stats {
+    background-color: #ffffff; 
+    position: relative;        
+    padding-top: 5px;
+    z-index: 2;                
+}
+
+.stats::before {
+    content: "";
+    position: absolute;
+    
+    top: -300px;               /* Высота тени */
+    left: 0;
+    width: 100%;
+    height: 300px;             /* Должно совпадать с top */
+    
+     
+    background: linear-gradient(to bottom, transparent, #000000);
+    
+    pointer-events: none;      
+}
+
+
+
+
+/* Стили текста */
+#title { 
+    font-size: clamp(48px, 10vw, 96px); /* Резиновый размер: подстроится под экран */
+    margin: 0; 
+    font-weight: 900; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#subtitle { 
+    font-size: clamp(20px, 2vw, 30px);
+    color: rgba(255, 255, 255, 0.8); 
+    margin-bottom: 30px; 
+}
+
+
+
+#statstext {
+    font-size: clamp(24px, 10vw, 48px);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8); 
+    
+}
+
+.statinfo {
+    font-size: clamp(5px, 4vw, 28px);
+    color: rgba(0, 0, 0, 1); 
+    
+    
+
+}
+.statinfo h2 {
+    font-size: clamp(60px, 3vw, 80px);
+    
+    
+
+}
+
+
+/* Фоны для карточек */
+#front { 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://rg.ru/uploads/images/2024/06/23/ria_8682752hr_333.jpg') no-repeat center/cover; 
+}
+
+#suarmy { 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://news.store.rambler.ru/img/96ac546aa7bd926ef6d265c06a10b328?img-1-resize=width%3A100%25%2Cheight%3A560%2Cfit%3Acover&img-format=auto') no-repeat center/cover; 
+}
+
+#depth { 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://img.belta.by/images/storage/news/with_archive/2024/000022_1719843422_644957_big.jpg') no-repeat center/cover; 
+}
+
+#result { 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://i.redd.it/py2rjsnkz8he1.jpeg') no-repeat center/cover; 
+}
+
+/* Эффект при наведении */
+#front:hover, #suarmy:hover, #depth:hover, #result:hover {
+    transform: scale(1.02);
+}

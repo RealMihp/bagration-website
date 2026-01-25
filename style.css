@@ -6,7 +6,7 @@ body {
 .first {
     background: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-        url('https://storage01.sb.by/iblock/0d5/0d56577139a7c71d3b66c9b6f7529ea2/8a29bed39e520b1fd94f6cf9b3f6dbf2.jpg');
+        url('bg1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -155,22 +155,22 @@ body {
 /* Фоны для карточек */
 #front { 
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://rg.ru/uploads/images/2024/06/23/ria_8682752hr_333.jpg') no-repeat center/cover; 
+                url('frontbg.png') no-repeat center/cover; 
 }
 
 #suarmy { 
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://news.store.rambler.ru/img/96ac546aa7bd926ef6d265c06a10b328?img-1-resize=width%3A100%25%2Cheight%3A560%2Cfit%3Acover&img-format=auto') no-repeat center/cover; 
+                url('suarmybg.png') no-repeat center/cover; 
 }
 
 #depth { 
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://img.belta.by/images/storage/news/with_archive/2024/000022_1719843422_644957_big.jpg') no-repeat center/cover; 
+                url('depthbg.jpg') no-repeat center/cover; 
 }
 
 #result { 
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://i.redd.it/py2rjsnkz8he1.jpeg') no-repeat center/cover; 
+                url('resultbg.jpeg') no-repeat center/cover; 
 }
 
 /* Эффект при наведении */
